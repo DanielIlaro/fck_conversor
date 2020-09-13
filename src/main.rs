@@ -1,9 +1,9 @@
-// O fck_conversor, faz conversões de temperatura entre as escalas Celsius, Fahrenhreit e Kelvin.
+// O fck_conversor faz conversões de temperatura entre as escalas Celsius, Fahrenhreit e Kelvin.
 
 use std::io;
 
 /* 
-*   Essa função faz o cálculo da temperatura:
+*   Essa função faz o cálculo de conversão entre escalas de temperatura:
 *       - opc é do tipo u32 e recebe o valor da opção escolhida pelo usuario
 *       - valor é do tipo f64 e recebe o valor que deve ser convertido para a outra escala
 */
@@ -18,8 +18,8 @@ fn calcular_temperatura(opc: u32, valor : f64) -> String{
 
     match opc {
         1 => {
-                let res = valor + C;
-                res.to_string()+" °C"
+            let res = valor + C;
+            res.to_string()+" °C"
         }
 
         2 => {
@@ -43,7 +43,7 @@ fn calcular_temperatura(opc: u32, valor : f64) -> String{
             let res = (valor - F) / 1.8;
             res.to_string()+" °C"
         }
-        _ => "Erro".to_string()
+        _ => String::from("Erro")
     }
 }
 
